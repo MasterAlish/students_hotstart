@@ -40,3 +40,7 @@ class SearchView(TemplateView):
         return render(request, self.template_name, context)
 
 
+class ArticlesView(TemplateView):
+    template_name = "articles.html"
+
+

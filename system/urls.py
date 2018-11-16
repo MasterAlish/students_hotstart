@@ -20,7 +20,7 @@ from django.contrib.auth import views as auth_views
 from django.contrib.auth.decorators import login_required
 from django.views import static
 
-from system.views import HomeView, AboutView, contacts_view, SearchView
+from system.views import HomeView, AboutView, contacts_view, SearchView, ArticlesView
 
 urlpatterns = [
     url(r'^$', HomeView.as_view(), name="home"),
@@ -28,6 +28,7 @@ urlpatterns = [
     url(r'^contacts/$', contacts_view, name="contacts"),
 
     url(r'^search/$', SearchView.as_view(), name="search"),
+    url(r'^articles/$', ArticlesView.as_view(), name="articles"),
 
     url(r'^admin/', include(admin.site.urls)),
 ]
