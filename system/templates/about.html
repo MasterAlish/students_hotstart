@@ -1,0 +1,47 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Django Hotstart</title>
+
+    <script src="{% static 'js/jquery-3.2.1.slim.min.js' %}" type="application/javascript"></script>
+    <script src="{% static 'js/bootstrap-4/bootstrap.min.js' %}" type="application/javascript"></script>
+    <script src="{% static 'js/typeahead.bundle.js' %}"></script>
+    <script src="{% static 'js/hotstart.js' %}" type="application/javascript"></script>
+
+    <link href="{% static 'css/bootstrap-4/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/hotstart.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <h2>О нас</h2>
+    <p>
+        Вас не напугал наш прошлый пост. Вы ознакомились с сезонностью, изучили спрос, подробно расписали бизнес-задачи,
+        проконсультировались с SEO-специалистом и уже готовы идти к разработчику. Давайте задержимся еще на пятнадцать минут
+        и узнаем, о чем следует позаботиться, чтобы стать владельцем интернет-магазина.
+    </p>
+
+    <p>Если коротко:</p>
+    <ul>
+        <li>вам понадобится оформить бизнес юридически;</li>
+        <li>выбрать систему налогообложения;</li>
+        <li>определиться с доменным именем;</li>
+        <li>собрать команду сотрудников;</li>
+        <li>решить: будете брать готовый шаблон или сделаете сайт с нуля.</li>
+    </ul>
+    <p>
+        Мы попросили нескольких наших клиентов поделиться своим опытом и рассказать, насколько обременительно вести бизнес в
+        Украине и Республике Беларусь. Предлагаем вам в комментариях к посту рассказать о личном опыте ведения бизнеса в
+        России и Казахстане. Никаких мануалов — только живой опыт, факапы и/или успешные кейсы.ф
+    </p>
+    <p>
+        <b>Тел:</b> {{ number }}<br>
+        <b>Email:</b> {{ email }}<br>
+    </p>
+    <p>
+        <a class="btn btn-warning" href="/">На главную</a>
+        <a class="btn btn-danger" href="/contacts">Контакты</a>
+    </p>
+</body>
+</html>

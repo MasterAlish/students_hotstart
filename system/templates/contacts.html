@@ -1,0 +1,34 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Django Hotstart</title>
+
+    <script src="{% static 'js/jquery-3.2.1.slim.min.js' %}" type="application/javascript"></script>
+    <script src="{% static 'js/bootstrap-4/bootstrap.min.js' %}" type="application/javascript"></script>
+    <script src="{% static 'js/typeahead.bundle.js' %}"></script>
+    <script src="{% static 'js/hotstart.js' %}" type="application/javascript"></script>
+
+    <link href="{% static 'css/bootstrap-4/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/hotstart.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <h2>Контакы</h2>
+    <p>
+        На этой странице вы найдете все наши номера
+    </p>
+
+    <ul>
+        {% for number in numbers %}
+            <li>{{ number }}</li>
+        {% endfor %}
+    </ul>
+
+    <p>
+        <a class="btn btn-warning" href="{% url 'home' %}">На главную</a>
+        <a class="btn btn-danger" href="{% url 'about' %}">О нас</a>
+    </p>
+</body>
+</html>
